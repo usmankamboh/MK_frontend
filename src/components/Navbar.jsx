@@ -5,7 +5,7 @@ import { ShopContext } from '../context/ShopContext';
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
-    const {setShowSearch} = useContext(ShopContext);
+    const {setShowSearch,getCartCount} = useContext(ShopContext);
     return (
         <div className='flex items-center justify-between py-5 font-medium'>
             <Link to='/'><img src={assets.logo} className='w-36' alt='' /></Link>
@@ -49,15 +49,17 @@ const Navbar = () => {
             <div className='flex items-center gap-6'>
                 <Link to='/cart' className='relative'>
                     <img src={assets.cart} className='w-5 min-w-5' alt='' />
-                    <p className='absolute right-[-3px] bottom-[-6px] w-3 text-center leading-4  text-red-500 aspect-square rounded-full text-[13px]'> 10</p>
+                    <p className='absolute right-[-5px] bottom-[-5px] w-3 text-center leading-3  text-red-500 aspect-square rounded-full font-bold text-[13px]'>{getCartCount()}</p>
                 </Link>
                 <img onClick={()=>setShowSearch(true)} src={assets.search} className='w-5 cursor-pointer' alt="" />
                 <div className='group relative'>
+                    <Link to='/login'>
                     <img
                         src={assets.profileicon}
                         className="w-5 cursor-pointer"
                         alt=""
                     />
+                    </Link>
                     <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
                         <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded'>
                             <p className="cursor-pointer hover:text-orange-500">My Profile</p>
