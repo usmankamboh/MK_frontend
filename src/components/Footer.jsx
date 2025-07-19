@@ -22,10 +22,10 @@ const Footer = () => {
                         <span style={{ color: '#547980' }}>Y</span>
                     </p>
                     <ul className='flex flex-col gap-1 text-gray-600'>
-                        <li>Home</li>
-                        <li>About Us</li>
-                        <li>Delivery</li>
-                        <li>Privacy Policy</li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about-us">About Us</a></li>
+                        <li><a href="/collection">Collections</a></li>
+                        <li><a href="/contact-us">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>

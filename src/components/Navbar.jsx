@@ -60,13 +60,13 @@ const Navbar = () => {
                         alt=""
                     />
                     </Link>
-                    <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
+                    {/* <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
                         <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded'>
                             <p className="cursor-pointer hover:text-orange-500">My Profile</p>
                             <p className="cursor-pointer hover:text-blue-500">Orders</p>
                             <p className="cursor-pointer hover:text-red-500">Logout</p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <img onClick={() => setVisible(true)} src={assets.menu} className='w-5 cursor-pointer sm:hidden' alt='' />
             </div>
